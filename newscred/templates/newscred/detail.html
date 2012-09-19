@@ -1,0 +1,49 @@
+<style type="text/css">
+    .related_topics{
+        height: 180px;
+        padding: 2px;
+    }
+    .related_topics_block{
+        padding: 2px;
+        float: left;
+    }
+    .topic{
+        width: 1024px;
+        min-height: 80px;
+    }
+    .topic_thumb{
+        float: left;
+        padding: 4px;
+    }
+</style>
+
+{% extends "layout/base.html" %}
+{% block title %}Topic Details{% endblock %}
+
+{% block content %}
+
+{% load newscred_extras %}
+
+<h1>{{ topic.topic_group }}</h1>
+<div class="topic">
+    <div class="topic_thumb"><img src="{{ topic.image_url }}"/></div>
+    {{ topic.description|truncatechars:200|upper }}
+</div>
+<br/>
+{% if related_topics %}
+<div class="related_topics">
+    <h1>Related Topics</h1>
+    {% for  related_topic in related_topics %}
+    <div class="related_topics_block">
+        <a href="/newscred/{{ related_topic.guid }}/">
+            <img src="{{ related_topic.image_url }}"/>
+            <br/>
+            {{ related_topic.topic_group }}
+        </a>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+<br/>
+<a href="/newscred/">back to search</a>
+{% endblock %}

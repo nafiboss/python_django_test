@@ -1,0 +1,28 @@
+{% extends "layout/base.html" %}
+{% block title %}Topics Search{% endblock %}
+
+{% block content %}
+<h1>Topics Search</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="." method="get">
+
+     <input type="text" name="query_string"  id="query" value="" />
+     <label for="query">Topic : </label><br />
+     <input type="submit" value="Search" />
+</form>
+
+{% if topics %}
+   <ul>
+   {% for topic in topics %}
+       <li>
+           <a href="/newscred/{{ topic.guid }}/">{{ topic.topic_group }}</a>
+
+       </li>
+   {% endfor %}
+   </ul>
+{% else %}
+    <p>No topics found.</p>
+{% endif %}
+{% endblock %}
