@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'my_test_db',                      # Or path to database file if using sqlite3.
+        'NAME': 'my_test_db_1',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -93,6 +93,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'newscred.custom.middleware.RequestMiddleware'
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -124,7 +125,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'polls',
     'newscred',
-    'bootstrap_toolkit'
+    'bootstrap_toolkit',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -167,3 +168,8 @@ BOOTSTRAP_BASE_URL      = 'http://twitter.github.com/bootstrap/assets/'
 BOOTSTRAP_CSS_BASE_URL  = BOOTSTRAP_BASE_URL + 'css/'
 BOOTSTRAP_CSS_URL       = BOOTSTRAP_CSS_BASE_URL + 'bootstrap.css'
 BOOTSTRAP_JS_BASE_URL   = BOOTSTRAP_BASE_URL + 'js/'
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.static',
+    'django.contrib.auth.context_processors.auth',
+)

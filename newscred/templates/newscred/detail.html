@@ -15,6 +15,10 @@
         float: left;
         padding: 4px;
     }
+
+    .change_title{
+        display: none;
+    }
 </style>
 
 {% extends "layout/base.html" %}
@@ -24,7 +28,19 @@
 
 {% load newscred_extras %}
 
-<h1>{{ topic.topic_group }}</h1>
+<h1>
+<div class="topic_title">
+    {{ topic.topic_group }}
+</div>
+<div class="change_title">
+    <form action="." method="get">
+        <input type="text" name="title"  id="title" value="" />
+        <input type="hidden" name="guid"  id="title" value="{{ topic.guid }}" />
+        <input type="submit" value="save" class="btn"/>
+    </form>
+
+</div>
+</h1>
 <div class="topic">
     <div class="topic_thumb"><img src="{{ topic.image_url }}"/></div>
     {{ topic.description|truncatechars:200|upper }}

@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -17,5 +18,8 @@ urlpatterns = patterns('',
     url(r'^polls/$', 'polls.views.index'),
     url(r'^polls/(?P<poll_id>\d+)/$', 'polls.views.detail'),
     url(r'^newscred/$', 'newscred.views.index'),
+    url(r'^newscred/edit_topic/$', 'newscred.views.save_edited_topic'),
     url(r'^newscred/(?P<topic_id>\w+)/$', 'newscred.views.detail'),
 )
+
+urlpatterns += staticfiles_urlpatterns()
