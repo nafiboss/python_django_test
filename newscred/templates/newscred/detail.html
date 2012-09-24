@@ -29,23 +29,25 @@
 {% load newscred_extras %}
 
 <h1>
-<div class="topic_title">
-    {{ topic.topic_group }}
-</div>
-<div class="change_title">
-    <form action="." method="get">
-        <input type="text" name="title"  id="title" value="" />
-        <input type="hidden" name="guid"  id="title" value="{{ topic.guid }}" />
-        <input type="submit" value="save" class="btn"/>
-    </form>
-
-</div>
+    <div class="topic_title">
+        {{ topic.topic_group }}
+    </div>
+    <div class="change_title">
+        <form action="." method="get" id="topic_update_form">
+            <input type="text" name="title"  id="title" value="" />
+            <input type="hidden" name="guid"  id="title" value="{{ topic.guid }}" />
+            <input type="submit" value="save" class="btn"/>
+        </form>
+    </div>
 </h1>
-<div class="topic">
-    <div class="topic_thumb"><img src="{{ topic.image_url }}"/></div>
-    {{ topic.description|truncatechars:200|upper }}
-</div>
+
+{% topic_detail  topic.guid %}
+
 <br/>
+Short URL: <a href="{{ topic.link }}"> {{ topic.link|shorter_url }}</a>
+
+<br/>
+
 {% if related_topics %}
 <div class="related_topics">
     <h1>Related Topics</h1>
@@ -60,6 +62,7 @@
     {% endfor %}
 </div>
 {% endif %}
+
 <br/>
 <a href="/newscred/">back to search</a>
 {% endblock %}

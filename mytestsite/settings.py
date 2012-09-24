@@ -1,4 +1,5 @@
 # Django settings for mytestsite project.
+from django.conf import global_settings
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -169,7 +170,10 @@ BOOTSTRAP_CSS_BASE_URL  = BOOTSTRAP_BASE_URL + 'css/'
 BOOTSTRAP_CSS_URL       = BOOTSTRAP_CSS_BASE_URL + 'bootstrap.css'
 BOOTSTRAP_JS_BASE_URL   = BOOTSTRAP_BASE_URL + 'js/'
 
-TEMPLATE_CONTEXT_PROCESSORS = (
+
+TEMPLATE_CONTEXT_PROCESSORS = global_settings.TEMPLATE_CONTEXT_PROCESSORS + (
     'django.core.context_processors.static',
     'django.contrib.auth.context_processors.auth',
-)
+    "newscred.context_processor.custom_context",)
+
+LOGIN_URL = '/login/'

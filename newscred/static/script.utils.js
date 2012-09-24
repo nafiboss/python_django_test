@@ -12,7 +12,7 @@ $(function() {
         $('.topic_title').html($(this).val())
     })
 
-    $('form').submit(function() {
+    $('#topic_update_form').submit(function() {
         var form_data = $(this).serialize();
         $.get('/newscred/edit_topic/?'+form_data,
             function(data) {
