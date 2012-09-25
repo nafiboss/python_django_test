@@ -21,5 +21,4 @@ $(function() {
         $('.change_title').toggle();
         return false;
     });
-    some thing changed
 });
