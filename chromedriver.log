@@ -1,0 +1,149 @@
+asdfasdfasdfasdfasdfasdfasfasdfasdf
+[0.000][INFO]:      ChromeDriver 23.0.1240.0 /usr/local/bin/chromedriver
+[0.972][FINE]:      Initializing session with capabilities {
+   "browserName": "chrome",
+   "chromeOptions": {
+      "args": [  ],
+      "binary": "",
+      "extensions": [  ]
+   },
+   "javascriptEnabled": true,
+   "platform": "ANY",
+   "version": ""
+}
+
+[0.973][INFO]:      Launching chrome: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome --enable-logging --log-level=1 --disable-hang-monitor --disable-prompt-on-repost --dom-automation --full-memory-crash-report --no-default-browser-check --no-first-run --disable-background-networking --disable-sync --disable-translate --disable-web-resources --safebrowsing-disable-auto-update --safebrowsing-disable-download-protection --disable-client-side-phishing-detection --disable-component-update --disable-default-apps --use-mock-keychain --ignore-certificate-errors about:blank
+[1.386][INFO]:      Connected to Chrome successfully. Version: 22.0.1229.94
+[1.426][FINE]:      Command received (/session/e31dfd0e6b151d1489c9ca3b950b9868)
+[1.426][FINE]:      Command finished (/session/e31dfd0e6b151d1489c9ca3b950b9868) with response {
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868",
+   "status": 0,
+   "value": {
+      "acceptSslCerts": false,
+      "applicationCacheEnabled": false,
+      "browserConnectionEnabled": false,
+      "browserName": "chrome",
+      "chrome.chromedriverVersion": "23.0.1240.0",
+      "chrome.nativeEvents": false,
+      "cssSelectorsEnabled": true,
+      "databaseEnabled": false,
+      "handlesAlerts": true,
+      "javascriptEnabled": true,
+      "locationContextEnabled": false,
+      "nativeEvents": true,
+      "platform": "mac",
+      "rotatable": false,
+      "takesScreenshot": true,
+      "version": "22.0.1229.94",
+      "webStorageEnabled": true
+   }
+}
+
+[1.453][FINE]:      Command received (/session/e31dfd0e6b151d1489c9ca3b950b9868/url) with params {
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868",
+   "url": "http://localhost:8000/newscred/"
+}
+
+[1.453][FINER]:     Waiting for all views to stop loading...
+[1.453][FINER]:     Done waiting for all views to stop loading
+[3.113][FINER]:     Waiting for all views to stop loading...
+[3.116][FINER]:     Done waiting for all views to stop loading
+[3.117][FINE]:      Command finished (/session/e31dfd0e6b151d1489c9ca3b950b9868/url) with response {
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[3.131][FINE]:      Command received (/session/e31dfd0e6b151d1489c9ca3b950b9868/element) with params {
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868",
+   "using": "css selector",
+   "value": "input[name=query_string]"
+}
+
+[3.131][FINER]:     Waiting for all views to stop loading...
+[3.132][FINER]:     Done waiting for all views to stop loading
+[3.147][FINER]:     Waiting for all views to stop loading...
+[3.148][FINER]:     Done waiting for all views to stop loading
+[3.148][FINE]:      Command finished (/session/e31dfd0e6b151d1489c9ca3b950b9868/element) with response {
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868",
+   "status": 0,
+   "value": {
+      "ELEMENT": ":wdc:1350809500643"
+   }
+}
+
+[3.150][FINE]:      Command received (/session/e31dfd0e6b151d1489c9ca3b950b9868/element/:wdc:1350809500643/value) with params {
+   "id": ":wdc:1350809500643",
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868",
+   "value": [ "k", "i", "m" ]
+}
+
+[3.150][FINER]:     Waiting for all views to stop loading...
+[3.150][FINER]:     Done waiting for all views to stop loading
+[3.468][FINER]:     Waiting for all views to stop loading...
+[3.469][FINER]:     Done waiting for all views to stop loading
+[3.469][FINE]:      Command finished (/session/e31dfd0e6b151d1489c9ca3b950b9868/element/:wdc:1350809500643/value) with response {
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[3.473][FINE]:      Command received (/session/e31dfd0e6b151d1489c9ca3b950b9868/element) with params {
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868",
+   "using": "css selector",
+   "value": "input[name=submit]"
+}
+
+[3.473][FINER]:     Waiting for all views to stop loading...
+[3.474][FINER]:     Done waiting for all views to stop loading
+[3.487][FINER]:     Waiting for all views to stop loading...
+[3.487][FINER]:     Done waiting for all views to stop loading
+[3.487][FINE]:      Command finished (/session/e31dfd0e6b151d1489c9ca3b950b9868/element) with response {
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868",
+   "status": 0,
+   "value": {
+      "ELEMENT": ":wdc:1350809500644"
+   }
+}
+
+[3.489][FINE]:      Command received (/session/e31dfd0e6b151d1489c9ca3b950b9868/element/:wdc:1350809500644/click) with params {
+   "id": ":wdc:1350809500644",
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868"
+}
+
+[3.489][FINER]:     Waiting for all views to stop loading...
+[3.489][FINER]:     Done waiting for all views to stop loading
+[3.528][FINER]:     Waiting for all views to stop loading...
+[4.843][FINER]:     Done waiting for all views to stop loading
+[4.843][FINE]:      Command finished (/session/e31dfd0e6b151d1489c9ca3b950b9868/element/:wdc:1350809500644/click) with response {
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868",
+   "status": 0,
+   "value": {
+
+   }
+}
+
+[6.848][FINE]:      Command received (/session/e31dfd0e6b151d1489c9ca3b950b9868/element) with params {
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868",
+   "using": "css selector",
+   "value": "#topics_list"
+}
+
+[6.848][FINER]:     Waiting for all views to stop loading...
+[6.849][FINER]:     Done waiting for all views to stop loading
+[6.862][FINER]:     Waiting for all views to stop loading...
+[6.862][FINER]:     Done waiting for all views to stop loading
+[6.862][FINE]:      Command finished (/session/e31dfd0e6b151d1489c9ca3b950b9868/element) with response {
+   "sessionId": "e31dfd0e6b151d1489c9ca3b950b9868",
+   "status": 0,
+   "value": {
+      "ELEMENT": ":wdc:1350809504358"
+   }
+}
+
+[6.865][FINE]:      Command received (/session/e31dfd0e6b151d1489c9ca3b950b9868)
+[6.923][INFO]:      Chrome shutdown
